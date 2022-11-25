@@ -1,55 +1,22 @@
 @extends('admin.layouts.main')
 @section('content')
-    <div class="container-fluid">
-        <div class="page-header">
-            <div class="row align-items-end">
-                <div class="col-lg-8">
-                    <div class="page-header-title">
-                        <i class="ik ik-inbox bg-blue"></i>
-                        <div class="d-inline">
-                            <h5>Danh sách thông tin cấu hình</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <nav class="breadcrumb-container" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="../index.html"><i class="ik ik-home"></i></a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Bài viết</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
 
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="row card-header">
-                        <div class="col-md-6">
-                            <div class=""><h3>Bài viết</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal" data-whatever="@mdo">Tạo cấu hình mới
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <table id="data_table" class="table">
+                <div class="card-body">
+                    <h4 class="card-title">cấu hình</h4>
+{{--                    <p class="card-description">--}}
+{{--                        <button type="button" class="btn btn-primary" data-toggle="modal"--}}
+{{--                                data-target="#exampleModal" data-whatever="@mdo">Tạo cấu hình mới--}}
+{{--                        </button>--}}
+{{--                    </p>--}}
+                    <div class="table-responsive">
+                        <table class="table">
                             <thead>
                             <tr>
                                 <th>Id</th>
                                 <th class="nosort">Title</th>
-                                {{--                                <th>Mô tả</th>--}}
                                 <th>Loại cấu hình</th>
                                 <th>Trạng thái</th>
                                 <th class="nosort">&nbsp;</th>

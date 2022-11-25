@@ -3,51 +3,19 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     @endsection
 @section('content')
-    <div class="container-fluid">
-        <div class="page-header">
-            <div class="row align-items-end">
-                <div class="col-lg-8">
-                    <div class="page-header-title">
-                        <i class="ik ik-inbox bg-blue"></i>
-                        <div class="d-inline">
-                            <h5>Danh sách tài khoản</h5>
-                            {{--                            <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>--}}
-                        </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">  <h4 class="card-title">Danh sách tài khoản</h4></div>
+                        <div class="col-md-6 text-right">  <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                        data-target="#exampleModal" data-whatever="@mdo">Tạo tài khoản mới
+                            </button></div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <nav class="breadcrumb-container" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="../index.html"><i class="ik ik-home"></i></a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Tài khoản</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
 
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="row card-header">
-                        <div class="col-md-6">
-                            <div class=""><h3>Tài khoản</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal" data-whatever="@mdo">Tạo tài khoản mới
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <table id="data_table" class="table">
+                    <div class="table-responsive">
+                        <table class="table">
                             <thead>
                             <tr>
                                 <th>Id</th>
@@ -60,20 +28,20 @@
                             </thead>
                             <tbody>
                             @forelse($users as $user)
-                            <tr>
-                                <td>{{$loop->index+1}}</td>
-                                <td>img</td>
-                                <td>{{$user->name}}</td>
-                                <td>{{$user->email}}</td>
-                                <td>{{$user->phone}}</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <a href="#"><i class="ik ik-eye"></i></a>
-                                        <a href="#"><i class="ik ik-edit-2"></i></a>
-                                        <a href="#"><i class="ik ik-trash-2"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>{{$loop->index+1}}</td>
+                                    <td>img</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->phone}}</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#"><i class="ik ik-eye"></i></a>
+                                            <a href="#"><i class="ik ik-edit-2"></i></a>
+                                            <a href="#"><i class="ik ik-trash-2"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
                             @empty
                                 <p>no users</p>
                             @endforelse
@@ -114,11 +82,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="col-form-label">Vai trò:</label>
-                             <select class="form-control role-select" name="role_id[]" multiple="multiple">
-                                 @foreach($roles as $item)
-                                 <option value="{{$item->id}}">{{$item->name}}</option>
-                                 @endforeach
-                             </select>
+                                <select class="form-control role-select" name="role_id[]" multiple="multiple">
+                                    @foreach($roles as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

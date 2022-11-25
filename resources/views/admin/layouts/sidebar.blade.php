@@ -55,19 +55,19 @@
             </a>
             <div class="collapse" id="form-elements3">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a class="nav-link" href="{{route('admin.blog.index')}}">DS khách hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('admin.customer.index')}}">DS khách hàng</a></li>
                 </ul>
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements3" aria-expanded="false" aria-controls="form-elements">
+            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements4" aria-expanded="false" aria-controls="form-elements">
                 <i class="menu-icon mdi mdi-card-text-outline"></i>
                 <span class="menu-title">Cấu hình view</span>
                 <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="form-elements3">
+            <div class="collapse" id="form-elements4">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a class="nav-link" href="{{route('admin.blog.index')}}">DS cấu hình</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('admin.configuration.index')}}">DS cấu hình</a></li>
                 </ul>
             </div>
         </li>

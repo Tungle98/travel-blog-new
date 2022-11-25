@@ -1,50 +1,18 @@
 @extends('admin.layouts.main')
 @section('content')
-    <div class="container-fluid">
-        <div class="page-header">
-            <div class="row align-items-end">
-                <div class="col-lg-8">
-                    <div class="page-header-title">
-                        <i class="ik ik-inbox bg-blue"></i>
-                        <div class="d-inline">
-                            <h5>Danh sách quyền</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <nav class="breadcrumb-container" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="../index.html"><i class="ik ik-home"></i></a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Quyền</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="row card-header">
-                        <div class="col-md-6">
-                            <div class=""><h3>Quyền</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal" data-whatever="@mdo">Tạo quyền mới
-                            </button>
-                        </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">  <h4 class="card-title">Danh sách quyền</h4></div>
+                        <div class="col-md-6 text-right">  <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                                   data-target="#exampleModal" data-whatever="@mdo">Tạo vai quyền
+                            </button></div>
                     </div>
 
-                    <div class="card-body">
-                        <table id="data_table" class="table">
+                    <div class="table-responsive">
+                        <table class="table">
                             <thead>
                             <tr>
                                 <th>Id</th>
