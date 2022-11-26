@@ -6,8 +6,8 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">  <h4 class="card-title">Danh sách quyền</h4></div>
-                        <div class="col-md-6 text-right">  <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                                   data-target="#exampleModal" data-whatever="@mdo">Tạo vai quyền
+                        <div class="col-md-6 text-right" style="text-align: right">  <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                                   data-target="#exampleModal" data-whatever="@mdo">Tạo quyền moi
                             </button></div>
                     </div>
 
@@ -29,9 +29,8 @@
                                     <td>{{$item->created_at}}</td>
                                     <td>
                                         <div class="table-actions">
-                                            <a href="#"><i class="ik ik-eye"></i></a>
-                                            <a href="#"><i class="ik ik-edit-2"></i></a>
-                                            <a href="#"><i class="ik ik-trash-2"></i></a>
+                                            <a href="#"><i class="mdi mdi-border-color" style="font-size: 20px"></i></a>
+                                            <a href="{{route('admin.permission.delete',$item->id)}}"><i class="mdi mdi-delete-forever" style="font-size: 20px; color: red"></i></a>
                                         </div>
                                     </td>
                                 </tr>

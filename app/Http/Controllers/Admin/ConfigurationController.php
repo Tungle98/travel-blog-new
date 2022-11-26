@@ -22,4 +22,12 @@ class ConfigurationController extends Controller
             ['description' => $request->description, 'type' => $request->type, 'status' => $request->status]);
         return redirect()->route('admin.configuration.index')->with('message', 'Tạo cấu hình thành công!!');;
     }
+
+    public function delete($id)
+    {
+        $config = ConfigurationSystem::query()->findOrFail($id);
+        $config->delete();
+
+        return redirect()->route('admin.configuration.index')->with('message','Xóa cấu hình thành công');
+    }
 }

@@ -20,4 +20,12 @@ class PermissionController extends Controller
             ['guard_name' => $request->guard_name]);
         return redirect()->route('admin.permission.index')->with('message', 'Tạo quyền thành công!!');
     }
+
+    public function delete($id)
+    {
+        $permission = Permission::query()->findOrFail($id);
+        $permission->delete();
+
+        return redirect()->route('admin.permission.index')->with('message','Xóa quyền thành công');
+    }
 }

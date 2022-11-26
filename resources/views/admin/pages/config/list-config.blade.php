@@ -5,12 +5,12 @@
             <div class="card">
 
                 <div class="card-body">
-                    <h4 class="card-title">cấu hình</h4>
-{{--                    <p class="card-description">--}}
-{{--                        <button type="button" class="btn btn-primary" data-toggle="modal"--}}
-{{--                                data-target="#exampleModal" data-whatever="@mdo">Tạo cấu hình mới--}}
-{{--                        </button>--}}
-{{--                    </p>--}}
+                    <div class="row">
+                        <div class="col-md-6">  <h4 class="card-title">Cấu hình</h4></div>
+                        <div class="col-md-6" style="text-align: right">     <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                                                     data-target="#exampleModal" data-whatever="@mdo">Tạo cấu hình mới
+                            </button></div>
+                    </div>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -27,7 +27,6 @@
                                 <tr>
                                     <td>{{$loop->index + 1}}</td>
                                     <td>{{$item->title}}</td>
-                                    {{--                                <td>{{$item->description}}</td>--}}
                                     <td>{{$item->type}}</td>
                                     <td>@if($item->status === 1)
                                             <span>  Hiển thị</span>
@@ -37,9 +36,8 @@
                                     </td>
                                     <td>
                                         <div class="table-actions">
-                                            <a href="#"><i class="ik ik-eye"></i></a>
-                                            <a href="#"><i class="ik ik-edit-2"></i></a>
-                                            <a href="#"><i class="ik ik-trash-2"></i></a>
+                                            <a href="#"><i class="mdi mdi-border-color" style="font-size: 20px"></i></a>
+                                            <a href="{{route('admin.configuration.delete',$item->id)}}"><i class="mdi mdi-delete-forever" style="font-size: 20px; color: red"></i></a>
                                         </div>
                                     </td>
                                 </tr>

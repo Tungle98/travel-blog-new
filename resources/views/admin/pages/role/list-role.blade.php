@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">  <h4 class="card-title">Danh sách vai trò</h4></div>
-                        <div class="col-md-6 text-right">  <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <div class="col-md-6" style="text-align:right ">  <button type="button" class="btn btn-primary" data-toggle="modal"
                                                                    data-target="#exampleModal" data-whatever="@mdo">Tạo vai trò mới
                             </button></div>
                     </div>
@@ -33,9 +33,8 @@
                                     <td>{{$item->created_at}}</td>
                                     <td>
                                         <div class="table-actions">
-                                            <a href="#"><i class="ik ik-eye"></i></a>
-                                            <a href="#"><i class="ik ik-edit-2"></i></a>
-                                            <a href="#"><i class="ik ik-trash-2"></i></a>
+                                            <a href="#"><i class="mdi mdi-border-color" style="font-size: 20px"></i></a>
+                                            <a href="{{route('admin.role.delete',$item->id)}}"><i class="mdi mdi-delete-forever" style="font-size: 20px; color: red"></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -53,7 +52,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Tài khoản mới</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Vai tro mới</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

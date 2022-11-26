@@ -26,7 +26,7 @@ class CategoryController extends Controller
         $data['slug'] = Str::slug($request->title);
         $data['image'] = $request->hasFile('image') ? $this->uploadCover($request->file('image')) : null;
         Category::create($data);
-        return redirect()->route('admin.category.index')->with('message','Tạo thể loại mới thành công');
+        return redirect()->route('admin.category.index')->with('message','Tạo danh mục mới thành công');
     }
 
     private function uploadCover($cover)
@@ -37,4 +37,12 @@ class CategoryController extends Controller
         return  $coverName;
 
     }
+
+public function delete($id)
+{
+    $category = Category::query()->findOrFail($id);
+    $category->delete();
+
+    return redirect()->route('admin.category.index')->with('message','Xóa danh mục thành công');
+}
 }

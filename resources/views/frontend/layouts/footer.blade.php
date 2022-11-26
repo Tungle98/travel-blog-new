@@ -1,7 +1,7 @@
 <footer class="footer-area section-gap">
     <div class="container">
         <div class="single-footer-widget footer_middle">
-            <img src="img/logo.png" alt="">
+            <img src="{{asset('frontend/img/logo.png')}}" alt="">
             <p class="mt-50">Stay updated with our latest trends</p>
             <div id="mc_embed_signup">
                 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
@@ -33,9 +33,9 @@
                 </a>
             </div>
 
-            <p class="col-lg-12 footer-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p class="col-lg-12 footer-text">
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i></a>
+            </p>
         </div>
     </div>
 </footer>

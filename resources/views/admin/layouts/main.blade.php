@@ -23,6 +23,7 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="{{asset('backend/images/favicon.png')}}" />
     <script src={{ asset('backend/ckeditor/ckeditor.js') }}></script>
+    @yield('style-css')
 </head>
 <body>
 <div class="container-scroller">
@@ -242,7 +243,9 @@
 <script src="{{asset('backend/js/jquery.cookie.js')}}" type="text/javascript"></script>
 <script src="{{asset('backend/js/dashboard.js')}}"></script>
 <script src="{{asset('backend/js/Chart.roundedBarCharts.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <!-- End custom js for this page-->
+@yield('js')
 </body>
 
 </html>

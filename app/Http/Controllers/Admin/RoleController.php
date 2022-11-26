@@ -23,8 +23,11 @@ class RoleController extends Controller
         $role->givePermissionTo($request->permission_id);
         return redirect()->route('admin.role.index')->with('message', 'Tạo vai trò thành công!!');
     }
-    public function delete(Request  $request)
+    public function delete($id)
     {
+        $role = Role::query()->findOrFail($id);
+        $role->delete();
 
+        return redirect()->route('admin.role.index')->with('message','Xóa vai trò thành công');
     }
 }

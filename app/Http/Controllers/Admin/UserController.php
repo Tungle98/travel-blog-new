@@ -30,4 +30,12 @@ class UserController extends Controller
         $user->assignRole($request->role_id);
         return redirect()->route('admin.user.index')->with('message','Tạo tài khoản thành công');
     }
+
+    public function delete($id)
+    {
+        $user = User::query()->findOrFail($id);
+        $user->delete();
+
+        return redirect()->route('admin.user.index')->with('message','Xóa tài khoản thành công');
+    }
 }

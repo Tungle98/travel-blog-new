@@ -45,4 +45,12 @@ class BlogController extends Controller
     {
 
     }
+
+    public function delete($id)
+    {
+        $blog = Blog::query()->findOrFail($id);
+        $blog->delete();
+
+        return redirect()->route('admin.blog.index')->with('message','Xóa bài viết thành công');
+    }
 }
