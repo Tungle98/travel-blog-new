@@ -36,7 +36,7 @@
                                     <td>
                                         <div class="table-actions">
                                             <a href="#"><i class="mdi mdi-border-color" style="font-size: 20px"></i></a>
-                                            <a href="#"><i class="mdi mdi-delete-forever" style="font-size: 20px; color: red"></i></a>
+                                            <a href="{{route('admin.slide.delete',$item->id)}}"><i class="mdi mdi-delete-forever" style="font-size: 20px; color: red"></i></a>
                                         </div>
                                     </td>
                                 </tr>

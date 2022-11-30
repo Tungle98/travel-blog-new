@@ -2,80 +2,32 @@
 @section('content')
     <section class="home_banner_area">
         <div class="owl-carousel owl-theme" id="home-owl">
-            <div class="slide-item owl-lazy" data-src="{{asset('frontend/img/banner/home-banner.jpg')}}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5"></div>
-                        <div class="col-lg-7">
-                            <div class="blog_text_slider">
-                                <div class="blog_text">
-                                    <img class="img-fluid" src="{{asset('frontend/img/banner/banner-img.png')}}" alt="">
-                                    <div
-                                        class="blog-meta bottom d-flex justify-content-between align-items-center flex-wrap">
-                                        <div class="meta">
-                                            <span class="icon fa fa-calendar"></span> March 14, 2018
-                                            <span class="icon fa fa-comments"></span> 05
-                                        </div>
-                                        <div>
-                                            <a class="read_more" href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            @foreach($slides as $item)
+            <div class="slide-item owl-lazy" data-src="{{asset($item->image)}}">
+{{--                <div class="container">--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-lg-5"></div>--}}
+{{--                        <div class="col-lg-7">--}}
+{{--                            <div class="blog_text_slider">--}}
+{{--                                <div class="blog_text">--}}
+{{--                                    <img class="img-fluid" src="{{asset('frontend/img/banner/banner-img.png')}}" alt="">--}}
+{{--                                    <div--}}
+{{--                                        class="blog-meta bottom d-flex justify-content-between align-items-center flex-wrap">--}}
+{{--                                        <div class="meta">--}}
+{{--                                            <span class="icon fa fa-calendar"></span> March 14, 2018--}}
+{{--                                            <span class="icon fa fa-comments"></span> 05--}}
+{{--                                        </div>--}}
+{{--                                        <div>--}}
+{{--                                            <a class="read_more" href="#">Read More</a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
-
-            <div class="slide-item owl-lazy" data-src="img/banner/home-banner2.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5"></div>
-                        <div class="col-lg-7">
-                            <div class="blog_text_slider">
-                                <div class="blog_text">
-                                    <img class="img-fluid" src="img/banner/banner-img2.png" alt="">
-                                    <div
-                                        class="blog-meta bottom d-flex justify-content-between align-items-center flex-wrap">
-                                        <div class="meta">
-                                            <span class="icon fa fa-calendar"></span> March 14, 2018
-                                            <span class="icon fa fa-comments"></span> 05
-                                        </div>
-                                        <div>
-                                            <a class="read_more" href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide-item owl-lazy" data-src="img/banner/home-banner3.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5"></div>
-                        <div class="col-lg-7">
-                            <div class="blog_text_slider">
-                                <div class="blog_text">
-                                    <img class="img-fluid" src="img/banner/banner-img3.png" alt="">
-                                    <div
-                                        class="blog-meta bottom d-flex justify-content-between align-items-center flex-wrap">
-                                        <div class="meta">
-                                            <span class="icon fa fa-calendar"></span> March 14, 2018
-                                            <span class="icon fa fa-comments"></span> 05
-                                        </div>
-                                        <div>
-                                            <a class="read_more" href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <!--================ End Home Banner Area =================-->
@@ -117,7 +69,7 @@
                 </div>
                 <div class="single_travel wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
                     <figure>
-                        <img class="img-fluid" src="img/travel/t2.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('frontend/img/travel/t2.jpg')}}" alt="">
                     </figure>
                     <div class="overlay"></div>
                     <div class="text-wrap">
@@ -139,7 +91,7 @@
                 </div>
                 <div class="single_travel wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
                     <figure>
-                        <img class="img-fluid" src="img/travel/t3.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('frontend/img/travel/t3.jpg')}}" alt="">
                     </figure>
                     <div class="overlay"></div>
                     <div class="text-wrap">
@@ -161,7 +113,7 @@
                 </div>
                 <div class="single_travel wow fadeIn" data-wow-duration="1s" data-wow-delay=".9s">
                     <figure>
-                        <img class="img-fluid" src="img/travel/t1.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('frontend/img/travel/t1.jpg')}}" alt="">
                     </figure>
                     <div class="overlay"></div>
                     <div class="text-wrap">
@@ -183,7 +135,7 @@
                 </div>
                 <div class="single_travel wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
                     <figure>
-                        <img class="img-fluid" src="img/travel/t2.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('frontend/img/travel/t2.jpg')}}" alt="">
                     </figure>
                     <div class="overlay"></div>
                     <div class="text-wrap">
@@ -205,7 +157,7 @@
                 </div>
                 <div class="single_travel wow fadeIn" data-wow-duration="1s" data-wow-delay=".9s">
                     <figure>
-                        <img class="img-fluid" src="img/travel/t3.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('frontend/img/travel/t3.jpg')}}" alt="">
                     </figure>
                     <div class="overlay"></div>
                     <div class="text-wrap">
@@ -227,7 +179,7 @@
                 </div>
                 <div class="single_travel wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
                     <figure>
-                        <img class="img-fluid" src="img/travel/t1.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('frontend/img/travel/t1.jpg')}}" alt="">
                     </figure>
                     <div class="overlay"></div>
                     <div class="text-wrap">
@@ -249,7 +201,7 @@
                 </div>
                 <div class="single_travel wow fadeIn" data-wow-duration="1s" data-wow-delay=".9s">
                     <figure>
-                        <img class="img-fluid" src="img/travel/t2.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('frontend/img/travel/t2.jpg')}}" alt="">
                     </figure>
                     <div class="overlay"></div>
                     <div class="text-wrap">
@@ -379,7 +331,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="single_place wow fadeIn text-center mt-480" data-wow-duration="1s">
-                        <img class="img-fluid w-100" src="img/places/p1.jpg" alt="">
+                        <img class="img-fluid w-100" src="{{asset('frontend/img/places/p1.jpg')}}" alt="">
                         <div class="overlay"></div>
                         <h4>Waterfall
                             <br> Mountain Island</h4>
@@ -387,13 +339,13 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single_place wow fadeIn text-center mt-240" data-wow-duration="1s" data-wow-delay=".2s">
-                        <img class="img-fluid w-100" src="img/places/p2.jpg" alt="">
+                        <img class="img-fluid w-100" src="{{asset('frontend/img/places/p2.jpg')}}" alt="">
                         <div class="overlay"></div>
                         <h4>Waterfall
                             <br> Mountain Island</h4>
                     </div>
                     <div class="single_place wow fadeIn text-center" data-wow-duration="1s" data-wow-delay="1s">
-                        <img class="img-fluid w-100" src="img/places/p3.jpg" alt="">
+                        <img class="img-fluid w-100" src="{{asset('frontend/img/places/p3.jpg')}}" alt="">
                         <div class="overlay"></div>
                         <h4>Waterfall
                             <br> Mountain Island</h4>
@@ -401,13 +353,13 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single_place wow fadeIn text-center" data-wow-duration="1s" data-wow-delay=".4s">
-                        <img class="img-fluid w-100" src="img/places/p4.jpg" alt="">
+                        <img class="img-fluid w-100" src="{{asset('frontend/img/places/p4.jpg')}}" alt="">
                         <div class="overlay"></div>
                         <h4>Waterfall
                             <br> Mountain Island</h4>
                     </div>
                     <div class="single_place wow fadeIn text-center" data-wow-duration="1s" data-wow-delay=".8s">
-                        <img class="img-fluid w-100" src="img/places/p5.jpg" alt="">
+                        <img class="img-fluid w-100" src="{{asset('frontend/img/places/p5.jpg')}}" alt="">
                         <div class="overlay"></div>
                         <h4>Waterfall
                             <br> Mountain Island</h4>
@@ -415,7 +367,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single_place wow fadeIn text-center mt-240" data-wow-duration="1s" data-wow-delay=".6s">
-                        <img class="img-fluid w-100" src="img/places/p6.jpg" alt="">
+                        <img class="img-fluid w-100" src="{{asset('frontend/img/places/p6.jpg')}}" alt="">
                         <div class="overlay"></div>
                         <h4>Waterfall
                             <br> Mountain Island</h4>

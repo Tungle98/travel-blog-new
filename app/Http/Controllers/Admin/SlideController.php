@@ -13,15 +13,16 @@ class SlideController extends Controller
     //
     public function index()
     {
-        $slides = Slide::query()->where('status',1)->take(4)->get();
-return view('admin.pages.slide.list-slide',compact('slides'));
+        $slides = Slide::query()->where('status', 1)->take(4)->get();
+        return view('admin.pages.slide.list-slide', compact('slides'));
     }
+
     public function store(Request $request)
     {
         $data = $request->all();
         $data['image'] = $request->hasFile('image') ? $this->uploadCover($request->file('image')) : null;
         Slide::create($data);
-        return redirect()->route('admin.slide.index')->with('message','Tạo slide mới thành công');
+        return redirect()->route('admin.slide.index')->with('message', 'Tạo slide mới thành công');
     }
 
     private function uploadCover($cover)
@@ -29,7 +30,14 @@ return view('admin.pages.slide.list-slide',compact('slides'));
         $coverName = 'images/slide/' . rand(1, 1000) . '_' . time() . '_slide' . '.' . $cover->getClientOriginalExtension();
 
         $cover->move(public_path('images/slide/'), $coverName);
-        return  $coverName;
+        return $coverName;
 
+    }
+    public function delete($id)
+    {
+        $slide = Slide::query()->findOrFail($id);
+        $slide->delete();
+
+        return redirect()->route('admin.slide.index')->with('message','Xóa slide thành công');
     }
 }

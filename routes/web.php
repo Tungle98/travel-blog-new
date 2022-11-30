@@ -130,6 +130,7 @@ Route::group([
     ], function () {
         Route::get('/', '\App\Http\Controllers\Admin\SlideController@index')->name('index');
         Route::post('/store', '\App\Http\Controllers\Admin\SlideController@store')->name('store');
+        Route::get('/delete/{id}', '\App\Http\Controllers\Admin\SlideController@delete')->name('delete');
     });
 //    Route::get('manage-menus/{id?}',[menuController::class,'index'])->name('menu');
 //    Route::post('create-menu',[menuController::class,'store']);
