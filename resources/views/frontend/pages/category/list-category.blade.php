@@ -69,11 +69,11 @@
                                         <div class="meta">
                                             <a href="#">
                                                 <span class="icon fa fa-calendar"></span> {{$item->created_at}}
-                                                <span class="icon fa fa-comments"></span> 05
+{{--                                                <span class="icon fa fa-comments"></span> 05--}}
                                             </a>
                                         </div>
                                         <div>
-                                            <a class="read_more" href="{{route('detail-category',$item->slug)}}">Read More</a>
+                                            <a class="read_more" href="{{route('detail-category',$item->slug)}}">Xem thêm</a>
                                         </div>
                                     </div>
                                 </div>

@@ -13,7 +13,7 @@ class HomeController extends Controller
     //
     public function index()
     {
-        $latest = Blog::query()->where('status',1)->latest()->take(6)->get();
+        $latest = Blog::query()->where( 'status',1)->latest()->take(6)->get();
         $popular = Blog::query()->where('status',1)->where('is_top',1)->latest()->take(9)->get();
         $slides  = Slide::query()->where('status',1)->latest()->take(4)->get();
         return view('frontend.pages.home',compact('popular','latest','slides'));

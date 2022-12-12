@@ -35,7 +35,7 @@
                     <div class="contact_info">
                         <div class="info_item">
                             <i class="lnr lnr-home"></i>
-                            <h6>California, United States</h6>
+                            <h6>Hà Nội, Việt Nam</h6>
                             <p>Santa monica bullevard</p>
                         </div>
                         <div class="info_item">
@@ -46,7 +46,7 @@
                         <div class="info_item">
                             <i class="lnr lnr-envelope"></i>
                             <h6><a href="#">support@travelvivu.com</a></h6>
-                            <p>Gui cau hoi toi bat cu khi nao!</p>
+                            <p>Gửi câu hỏi cho tôi bất cứ khi nào bạn cần!</p>
                         </div>
                     </div>
                 </div>
